@@ -12,7 +12,7 @@ export default function ColorToggleBtn({ mode = "Switch" }: ColorToggleBtnProps)
     return (
         <>
             {mode === "Switch" && (
-                <Group justify="center" my={25} ml={4}>
+                <Group justify="center">
                     <Switch
                         checked={colorScheme === 'dark'}
                         onChange={() => toggleColorScheme()}

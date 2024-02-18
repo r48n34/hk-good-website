@@ -24,8 +24,8 @@ const router = createBrowserRouter([
 function App() {
 	return (
 		<>
-			<ColorSchemeScript defaultColorScheme="dark" />
-			<MantineProvider defaultColorScheme="dark">
+			<ColorSchemeScript defaultColorScheme="light" />
+			<MantineProvider defaultColorScheme="light">
 				<Suspense fallback={<LoadingPage />}>
 					<RouterProvider router={router} />
 				</Suspense>

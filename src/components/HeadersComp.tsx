@@ -1,6 +1,9 @@
-import { AppShell, Burger, Group, ScrollArea, Skeleton, Text } from '@mantine/core';
+import { AppShell, Burger, Group, ScrollArea, Skeleton, Text, ActionIcon } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Outlet } from "react-router-dom";
+import ColorToggleBtn from './helper/ColorToggleBtn';
+
+import { IconAdjustments } from '@tabler/icons-react';
 
 function HeadersComp() {
 
@@ -20,7 +23,9 @@ function HeadersComp() {
             <AppShell.Header>
                 <Group h="100%" px="md">
                     <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-                    <Text>HK good website</Text>
+                    <Text fw={300} fz={20}>
+                        HK good website
+                    </Text>
                 </Group>
             </AppShell.Header>
 
@@ -41,9 +46,14 @@ function HeadersComp() {
                 </AppShell.Section>
 
                 <AppShell.Section>
-                    <Text fz={10}>
-                        Navbar footer – always at the bottom
-                    </Text>
+                    <Group justify="space-between">
+                        <ColorToggleBtn />
+
+                        <ActionIcon variant="light" aria-label="Settings">
+                            <IconAdjustments style={{ width: '70%', height: '70%' }} stroke={1.5} radius="lg" />
+                        </ActionIcon>
+
+                    </Group>
                 </AppShell.Section>
 
             </AppShell.Navbar>
