@@ -1,5 +1,6 @@
 import { Container } from '@mantine/core';
-import DisplayCardGrid from '../components/general/DisplayCardGrid';
+// import DisplayCardGrid from '../components/general/DisplayCardGrid';
+import DisplayCardGridScroll from '../components/general/DisplayCardGridScroll';
 
 const dataArr = new Array(100).fill(0).map( (_, i) => (
     {
@@ -15,7 +16,8 @@ const dataArr = new Array(100).fill(0).map( (_, i) => (
 function HomePage(){
     return (
         <Container fluid>
-            <DisplayCardGrid data={dataArr} />
+            {/* <DisplayCardGrid data={dataArr} /> */}
+            <DisplayCardGridScroll data={dataArr} />
         </Container>
     )
 }

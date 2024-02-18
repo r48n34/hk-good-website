@@ -17,7 +17,8 @@ function WebsiteCard({ data }: WebsiteCardProps) {
                 /> */}
                 <LazyLoadImage
                     alt={data.title}
-                    height={160}
+                    height={200}
+                    width="100%"
                     src={data.imageSrc || "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"}
                     effect="blur"
                     wrapperProps={{

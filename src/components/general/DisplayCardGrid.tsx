@@ -31,13 +31,14 @@ function DisplayCardGrid({ data }: DisplayCardGridProps){
         </Grid>
 
         <Pagination
+            mt={48}
+            mb={24}
             total={Math.ceil(data.length / EACH_PAGE_SHOWS)}
             value={activePage}
             onChange={(ind) => {
                 setPage(ind);
                 scrollTo({ y: 0 });
             }}
-            mt="sm"
         />
         </>
     )
