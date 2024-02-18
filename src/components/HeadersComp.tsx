@@ -1,9 +1,10 @@
-import { AppShell, Burger, Group, ScrollArea, Text, ActionIcon, NavLink } from '@mantine/core';
+import { AppShell, Burger, Group, ScrollArea, Text, NavLink, UnstyledButton } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Outlet, useNavigate } from "react-router-dom";
 import ColorToggleBtn from './helper/ColorToggleBtn';
 
-import { IconChevronRight, IconQuestionMark } from '@tabler/icons-react';
+import { IconChevronRight } from '@tabler/icons-react';
+import QuestionModal from './general/QuestionModal';
 
 function HeadersComp() {
 
@@ -24,18 +25,22 @@ function HeadersComp() {
             <AppShell.Header>
                 <Group h="100%" px="md">
                     <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+
+                    <UnstyledButton onClick={ () => navigate(`/`)}>
                     <Text fw={300} fz={20}>
                         HK good website
                     </Text>
+                    </UnstyledButton>
+
                 </Group>
             </AppShell.Header>
 
             <AppShell.Navbar p="md">
 
-                <AppShell.Section>
+                <AppShell.Section>  
                     <Text fz={14} fw={300}>
                         CATEGORY
-                    </Text>
+                    </Text>    
                 </AppShell.Section>
 
                 <AppShell.Section
@@ -62,11 +67,7 @@ function HeadersComp() {
                 <AppShell.Section>
                     <Group justify="space-between">
                         <ColorToggleBtn />
-
-                        <ActionIcon variant="subtle" aria-label="Settings" radius="lg">
-                            <IconQuestionMark style={{ width: '60%', height: '60%' }} stroke={1.5} />
-                        </ActionIcon>
-
+                        <QuestionModal />
                     </Group>
                 </AppShell.Section>
 
