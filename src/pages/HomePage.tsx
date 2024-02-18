@@ -1,68 +1,10 @@
 import { Container } from '@mantine/core';
+import DisplayCardGrid from '../components/general/DisplayCardGrid';
 
 function HomePage(){
     return (
         <Container fluid>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
+            <DisplayCardGrid data={[]} />
         </Container>
     )
 }
