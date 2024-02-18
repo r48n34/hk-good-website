@@ -16,7 +16,6 @@ const dataArr = new Array(100).fill(0).map( (_, i) => (
 function HomePage(){
     return (
         <Container fluid>
-            {/* <DisplayCardGrid data={dataArr} /> */}
             <DisplayCardGridScroll data={dataArr} />
         </Container>
     )

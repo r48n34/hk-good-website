@@ -7,6 +7,7 @@ import LoadingPage from './components/LoadingPage';
 import HeadersComp from './components/HeadersComp';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
+const CategoryPage = lazy(() => import('./pages/CategoryPage'));
 
 const router = createBrowserRouter([
 	{
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
 			{
                 path: "/",
                 element: <HomePage />,
+            },
+			{
+                path: "/category/:type",
+                element: <CategoryPage />,
             },
 		]
 	},

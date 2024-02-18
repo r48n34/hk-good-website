@@ -1,12 +1,13 @@
-import { AppShell, Burger, Group, ScrollArea, Skeleton, Text, ActionIcon } from '@mantine/core';
+import { AppShell, Burger, Group, ScrollArea, Text, ActionIcon, NavLink } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import ColorToggleBtn from './helper/ColorToggleBtn';
 
-import { IconQuestionMark } from '@tabler/icons-react';
+import { IconChevronRight, IconQuestionMark } from '@tabler/icons-react';
 
 function HeadersComp() {
 
+    const navigate = useNavigate()
     const [opened, { toggle }] = useDisclosure();
 
     return (
@@ -37,12 +38,25 @@ function HeadersComp() {
                     </Text>
                 </AppShell.Section>
 
-                <AppShell.Section grow my="md" component={ScrollArea}>
-                    {Array(60)
-                        .fill(0)
-                        .map((_, index) => (
-                            <Skeleton key={index} h={28} mt="sm" animate={false} />
-                    ))}
+                <AppShell.Section
+                    grow my="md"
+                    component={ScrollArea}
+                    // type="never"
+                    scrollbarSize={2}
+                >
+                    {
+                        ["IT", "Vtube", "Science", "Cooking", "School"].map((v) => (
+                            <NavLink
+                                key={v}
+                                // href="#required-for-focus"
+                                label={v}
+                                leftSection={
+                                    <IconChevronRight size="0.8rem" stroke={1.5} className="mantine-rotate-rtl" />
+                                }
+                                onClick={ () => navigate(`/category/${v}`)}
+                            />
+                        )
+                    )}
                 </AppShell.Section>
 
                 <AppShell.Section>
