@@ -1,26 +1,16 @@
 import { Text, Container } from "@mantine/core";
 import { useParams } from "react-router-dom";
 import DisplayCardGridScroll from "../components/general/DisplayCardGridScroll";
-
-const dataArr = new Array(100).fill(0).map( (_, i) => (
-    {
-        title: `ono-pharma recruit ${i}`,
-        src: "https://recruit.ono-pharma.com/",
-        imageSrc: "",
-        organization: "ono pharma",
-        category: ["requitment"],
-        tags: ["aaa", "bbb", "ccc"]
-    }
-))
+import { dataArrGen } from "../data/tempData";
 
 function CategoryPage(){
 
     let { type } = useParams();
+    const finalData = dataArrGen.filter( v => v.category.includes(type as any) )
 
     return (
         <>
         <Container fluid>
-
             <Text fw={300} fz={52}>
                 { type } Website Design
             </Text>
@@ -29,7 +19,7 @@ function CategoryPage(){
                 Here are the great { type } Design
             </Text>
 
-            <DisplayCardGridScroll data={dataArr} />
+            <DisplayCardGridScroll data={finalData} />
         </Container>
         </>
     )

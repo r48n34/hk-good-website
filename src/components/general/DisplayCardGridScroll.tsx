@@ -1,8 +1,8 @@
 import { Grid, Group, Loader, Space, Box } from "@mantine/core";
-
+import { useWindowScroll } from '@mantine/hooks';
 import { WebsiteData } from "../../interface/interface";
 import WebsiteCard from "./WebsiteCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InfiniteScroll from 'react-infinite-scroller';
 
 type DisplayCardGridProps = {
@@ -13,20 +13,28 @@ const EACH_PAGE_SHOWS = 20
 
 function DisplayCardGridScroll({ data }: DisplayCardGridProps) {
 
+    const [_, scrollTo] = useWindowScroll();
     const [activePage, setPage] = useState(1);
-    const [displayData, setDisplayData] = useState<WebsiteData[]>(data.slice(0, 24));
+    const [displayData, setDisplayData] = useState<WebsiteData[]>(data.slice(0, EACH_PAGE_SHOWS));
 
-    function fetchMore(page: number) {
-        const newPage = page + 1;
+    function fetchMore() {
+        const newPage = activePage + 1;
         setDisplayData(data.slice(0, (newPage - 1) * EACH_PAGE_SHOWS + EACH_PAGE_SHOWS))
         setPage(newPage)
     }
+
+    // Reset
+    useEffect( () => {
+        scrollTo({ y: 0 });
+        setDisplayData(data.slice(0, EACH_PAGE_SHOWS))
+        setPage(1);
+    },[data])
 
     return (
         <Box>
             <InfiniteScroll
                 pageStart={1}
-                loadMore={(page) => fetchMore(page)}
+                loadMore={() => fetchMore()}
                 threshold={150} // Default 250
                 hasMore={(activePage - 1) * EACH_PAGE_SHOWS + EACH_PAGE_SHOWS <= data.length}
                 loader={
@@ -35,13 +43,12 @@ function DisplayCardGridScroll({ data }: DisplayCardGridProps) {
                     </Group>
                 }
             >
-                <Grid grow gutter="xl">
+                <Grid gutter="xl">
                     {displayData.map((v) => (
                         <Grid.Col span={{ base: 12, md: 6, lg: 4 }} key={v.title}>
                             <WebsiteCard data={v} />
                         </Grid.Col>
                     ))}
-
                 </Grid>
             </InfiniteScroll>
 

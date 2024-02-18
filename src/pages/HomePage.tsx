@@ -1,22 +1,12 @@
 import { Container } from '@mantine/core';
 // import DisplayCardGrid from '../components/general/DisplayCardGrid';
 import DisplayCardGridScroll from '../components/general/DisplayCardGridScroll';
-
-const dataArr = new Array(100).fill(0).map( (_, i) => (
-    {
-        title: `ono-pharma recruit ${i}`,
-        src: "https://recruit.ono-pharma.com/",
-        imageSrc: "",
-        organization: "ono pharma",
-        category: ["requitment"],
-        tags: ["aaa", "bbb", "ccc"]
-    }
-))
+import { dataArrGen } from '../data/tempData';
 
 function HomePage(){
     return (
         <Container fluid>
-            <DisplayCardGridScroll data={dataArr} />
+            <DisplayCardGridScroll data={dataArrGen} />
         </Container>
     )
 }

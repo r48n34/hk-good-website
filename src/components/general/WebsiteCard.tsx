@@ -32,8 +32,8 @@ function WebsiteCard({ data }: WebsiteCardProps) {
             </Text>
 
             <Group justify="flex-start" mt={8}>
-                { data.tags.map( v => 
-                    <Badge color="orange" radius="sm" key={v} size="sm">
+                { data.tags.map( (v, i) => 
+                    <Badge color="orange" radius="sm" key={v + i} size="sm">
                         {v}
                     </Badge>
                 )}
