@@ -4,6 +4,7 @@ import { WebsiteData, genRandomCategory } from "../interface/interface"
 //     {}
 // ]
 
+// For testing
 export const dataArrGen: WebsiteData[] = new Array(100).fill(0).map( (_, i) => {
 
     const typeArr = Math.random() >= 0.5 ? [genRandomCategory()] : [genRandomCategory(), genRandomCategory()]
