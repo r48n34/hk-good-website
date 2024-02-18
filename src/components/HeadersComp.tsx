@@ -5,6 +5,7 @@ import ColorToggleBtn from './helper/ColorToggleBtn';
 
 import { IconChevronRight } from '@tabler/icons-react';
 import QuestionModal from './general/QuestionModal';
+import { categoryList } from '../data/tempData';
 
 function HeadersComp() {
 
@@ -50,7 +51,7 @@ function HeadersComp() {
                     scrollbarSize={2}
                 >
                     {
-                        ["IT", "Vtube", "Science", "Cooking", "School"].map((v) => (
+                        categoryList.map((v) => (
                             <NavLink
                                 key={v}
                                 // href="#required-for-focus"

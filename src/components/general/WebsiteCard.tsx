@@ -16,10 +16,11 @@ function WebsiteCard({ data }: WebsiteCardProps) {
                     alt="Norway"
                 /> */}
                 <LazyLoadImage
+                    style={{ objectFit: "cover" }}
                     alt={data.title}
-                    height={200}
+                    height={250}
                     width="100%"
-                    src={data.imageSrc || "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"}
+                    src={`/${data.imageSrc}` || "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"}
                     effect="blur"
                     wrapperProps={{
                         style: {transitionDelay: "1s"},

@@ -45,29 +45,131 @@ export const genRandomCategory = () => categoryList[Math.floor( Math.random() * 
 
 export const dataArrGen: WebsiteData[] = [
     {
-        title: `香港創科協會`,
-        src: "https://hkita.hk/",
-        imageSrc: "",
-        organization: "香港創科協會",
-        category: ["IT", "Business"],
-        tags: ["IT", "Business"]
+        "title": "香港創科協會",
+        "src": "https://hkita.hk/",
+        "imageSrc": "香港創科協會.jpg",
+        "organization": "香港創科協會",
+        "category": [
+            "IT",
+            "Business"
+        ],
+        "tags": [
+            "IT",
+            "Business"
+        ]
     },
     {
-        title: `Digital Butter's`,
-        src: "https://www.butter.com.hk/services/web-design-hong-kong",
-        imageSrc: "",
-        organization: "Digital Butter's",
-        category: ["IT", "Business"],
-        tags: ["IT", "Business"]
+        "title": "Digital Butter's",
+        "src": "https://www.butter.com.hk/services/web-design-hong-kong",
+        "imageSrc": "Digital_Butter's.jpg",
+        "organization": "Digital Butter's",
+        "category": [
+            "IT",
+            "Business"
+        ],
+        "tags": [
+            "IT",
+            "Business"
+        ]
     },
     {
-        title: `betterpi`,
-        src: "https://www.betterpi.com/",
-        imageSrc: "",
-        organization: "betterpi",
-        category: ["IT", "Business"],
-        tags: ["IT", "Business"]
+        "title": "betterpi",
+        "src": "https://www.betterpi.com/",
+        "imageSrc": "betterpi.jpg",
+        "organization": "betterpi",
+        "category": [
+            "IT",
+            "Business"
+        ],
+        "tags": [
+            "IT",
+            "Business"
+        ]
     },
+    {
+        "title": "hk-bingo",
+        "src": "https://www.hk-bingo.com/",
+        "imageSrc": "hk-bingo.jpg",
+        "organization": "hk-bingo",
+        "category": [
+            "IT",
+            "Business"
+        ],
+        "tags": [
+            "IT",
+            "Business"
+        ]
+    },
+    {
+        "title": "Page lab",
+        "src": "https://hellopagelab.com/",
+        "imageSrc": "Page_lab.jpg",
+        "organization": "pagelab",
+        "category": [
+            "IT",
+            "Business"
+        ],
+        "tags": [
+            "IT",
+            "Business"
+        ]
+    },
+    {
+        "title": "tectom",
+        "src": "https://www.tectom.com.hk/",
+        "imageSrc": "tectom.jpg",
+        "organization": "tectom",
+        "category": [
+            "IT",
+            "Business"
+        ],
+        "tags": [
+            "IT",
+            "Business"
+        ]
+    },
+    {
+        "title": "mediastudio",
+        "src": "https://www.mediastudio.space/zh/service/website-design",
+        "imageSrc": "mediastudio.jpg",
+        "organization": "mediastudio",
+        "category": [
+            "IT",
+            "Business"
+        ],
+        "tags": [
+            "IT",
+            "Business"
+        ]
+    },
+    {
+        "title": "websiteking",
+        "src": "https://www.websiteking.hk/",
+        "imageSrc": "websiteking.jpg",
+        "organization": "websiteking",
+        "category": [
+            "IT",
+            "Business"
+        ],
+        "tags": [
+            "IT",
+            "Business"
+        ]
+    },
+    {
+        "title": "appicidea",
+        "src": "https://appicidea.com/",
+        "imageSrc": "appicidea.jpg",
+        "organization": "appicidea",
+        "category": [
+            "IT",
+            "Business"
+        ],
+        "tags": [
+            "IT",
+            "Business"
+        ]
+    }
 ]
 
 
