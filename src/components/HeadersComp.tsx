@@ -10,7 +10,7 @@ import { categoryList } from '../data/tempData';
 function HeadersComp() {
 
     const navigate = useNavigate()
-    const [opened, { toggle }] = useDisclosure();
+    const [opened, { toggle, close }] = useDisclosure();
 
     return (
         <AppShell
@@ -59,7 +59,10 @@ function HeadersComp() {
                                 leftSection={
                                     <IconChevronRight size="0.8rem" stroke={1.5} className="mantine-rotate-rtl" />
                                 }
-                                onClick={ () => navigate(`/category/${v}`)}
+                                onClick={ () => {
+                                    navigate(`/category/${v}`);
+                                    close()
+                                }}
                             />
                         )
                     )}
