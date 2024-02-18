@@ -1,17 +1,24 @@
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css';
 import { lazy, Suspense } from 'react';
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import LoadingPage from './components/LoadingPage';
+import HeadersComp from './components/HeadersComp';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <HomePage />,
+        element: <HeadersComp />,
+        children: [
+			{
+                path: "/",
+                element: <HomePage />,
+            },
+		]
 	},
-
 ]);
 
 function App() {
