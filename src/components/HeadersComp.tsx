@@ -3,7 +3,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { Outlet } from "react-router-dom";
 import ColorToggleBtn from './helper/ColorToggleBtn';
 
-import { IconAdjustments } from '@tabler/icons-react';
+import { IconQuestionMark } from '@tabler/icons-react';
 
 function HeadersComp() {
 
@@ -50,7 +50,7 @@ function HeadersComp() {
                         <ColorToggleBtn />
 
                         <ActionIcon variant="subtle" aria-label="Settings" radius="lg">
-                            <IconAdjustments style={{ width: '60%', height: '60%' }} stroke={1.5} />
+                            <IconQuestionMark style={{ width: '60%', height: '60%' }} stroke={1.5} />
                         </ActionIcon>
 
                     </Group>

@@ -7,6 +7,7 @@ const dataArr = new Array(100).fill(0).map( (_, i) => (
         src: "https://recruit.ono-pharma.com/",
         imageSrc: "",
         organization: "ono pharma",
+        category: ["requitment"],
         tags: ["aaa", "bbb", "ccc"]
     }
 ))

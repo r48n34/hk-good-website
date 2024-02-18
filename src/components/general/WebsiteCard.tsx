@@ -1,5 +1,6 @@
-import { Card, Image, Text, Badge, Group } from '@mantine/core';
+import { Card, Text, Badge, Group } from '@mantine/core';
 import { WebsiteData } from "../../interface/interface";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 type WebsiteCardProps = {
     data: WebsiteData;
@@ -9,10 +10,19 @@ function WebsiteCard({ data }: WebsiteCardProps) {
     return (
         <Card shadow="sm" padding="lg" radius="md" component="a" href={data.src} target='_blank'>
             <Card.Section >
-                <Image
+                {/* <Image
                     src={data.imageSrc || "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"}
                     height={160}
                     alt="Norway"
+                /> */}
+                <LazyLoadImage
+                    alt={data.title}
+                    height={160}
+                    src={data.imageSrc || "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"}
+                    effect="blur"
+                    wrapperProps={{
+                        style: {transitionDelay: "1s"},
+                    }}
                 />
             </Card.Section>
 
