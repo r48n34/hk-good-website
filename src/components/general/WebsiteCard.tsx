@@ -7,7 +7,7 @@ type WebsiteCardProps = {
 
 function WebsiteCard({ data }: WebsiteCardProps) {
     return (
-        <Card padding="lg" radius="md" component="a" href={data.src} target='_blank'>
+        <Card shadow="sm" padding="lg" radius="md" component="a" href={data.src} target='_blank'>
             <Card.Section >
                 <Image
                     src={data.imageSrc || "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"}

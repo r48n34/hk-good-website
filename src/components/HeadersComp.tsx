@@ -49,8 +49,8 @@ function HeadersComp() {
                     <Group justify="space-between">
                         <ColorToggleBtn />
 
-                        <ActionIcon variant="light" aria-label="Settings">
-                            <IconAdjustments style={{ width: '70%', height: '70%' }} stroke={1.5} radius="lg" />
+                        <ActionIcon variant="subtle" aria-label="Settings" radius="lg">
+                            <IconAdjustments style={{ width: '60%', height: '60%' }} stroke={1.5} />
                         </ActionIcon>
 
                     </Group>
