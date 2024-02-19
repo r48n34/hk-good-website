@@ -5,10 +5,12 @@ export const categoryList = [
     // "LIVE/Radio",
     // "Corporation",
     "Business",
-    // "Education",
+    "Education",
     // "Kids",
     "IT",
-    // "Design",
+    "Marketing",
+    "Design",
+    "Gambling",
     // "Manufacturing",
     // "Life/Goods",
     // "Personal Site",
@@ -21,18 +23,20 @@ export const categoryList = [
     // "Cooking",
     // "Plants",
     // "Pets",
-    // "Culture",
-    // "Art",
+    "Culture",
+    "Art",
     // "Sports",
     // "Health",
     // "Medical",
     // "Science",
+    "Energy",
     // "Travel",
     // "Agriculture",
     // "Car",
-    // "Real estate",
+    "Real estate",
     // "Architecture",
-    // "Finance/Insurance",
+    "Finance",
+    "Insurance",
     // "Law",
     // "Marriage",
     // "Celebration",
@@ -168,6 +172,106 @@ export const dataArrGen: WebsiteData[] = [
         "tags": [
             "IT",
             "Business"
+        ]
+    },
+    {
+        "title": "snapask",
+        "src": "https://snapask.com/zh-hk/",
+        "imageSrc": "",
+        "organization": "snapask",
+        "category": [
+            "Education"
+        ],
+        "tags": [
+            "Education"
+        ]
+    },
+    {
+        "title": "pcmarket",
+        "src": "https://www.pcmarket.com.hk/",
+        "imageSrc": "",
+        "organization": "pcmarket",
+        "category": [
+            "IT",
+            "Marketing"
+        ],
+        "tags": [
+            "IT",
+            "Marketing"
+        ]
+    },
+    {
+        "title": "Centanet hk",
+        "src": "https://hk.centanet.com/info/index",
+        "imageSrc": "",
+        "organization": "Centanet hk",
+        "category": [
+            "Real estate"
+        ],
+        "tags": [
+            "Real estate"
+        ]
+    },
+    {
+        "title": "tpark",
+        "src": "https://www.tpark.hk/en/",
+        "imageSrc": "",
+        "organization": "tpark",
+        "category": [
+            "Energy"
+        ],
+        "tags": [
+            "Energy"
+        ]
+    },
+    {
+        "title": "citic",
+        "src": "https://www.citic.com/ar2021/en/",
+        "imageSrc": "",
+        "organization": "citic",
+        "category": [
+            "Finance"
+        ],
+        "tags": [
+            "Finance"
+        ]
+    },
+    {
+        "title": "superview",
+        "src": "https://www.superview.com.hk/",
+        "imageSrc": "",
+        "organization": "superview",
+        "category": [
+            "Design"
+        ],
+        "tags": [
+            "Design"
+        ]
+    },
+    {
+        "title": "HK Art museum",
+        "src": "https://hk.art.museum/en/web/ma/home.html",
+        "imageSrc": "",
+        "organization": "HK Art museum",
+        "category": [
+            "Art",
+            "Culture"
+        ],
+        "tags": [
+            "Art", 
+            "Culture"
+        ]
+    },
+    {
+        "title": "HKJC Smart platform",
+        "src": "https://m.hkjc.com/en/index.html",
+        "imageSrc": "",
+        "organization": "HKJC",
+        "category": [
+            "Gambling",
+        ],
+        "tags": [
+            "Gambling", 
         ]
     }
 ]

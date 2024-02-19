@@ -12,6 +12,12 @@ async function newMeProjectsDataListHelper(data: WebsiteData[]){
     console.log("Starting")
 
     for(let v of data){
+
+        if(!!v.imageSrc){
+            console.log(`Skipping ${v.src}`)
+            continue;
+        }
+
         console.log(`Processing ${v.src}`)
         const page = await browser.newPage();
 
