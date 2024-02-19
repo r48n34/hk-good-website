@@ -35,6 +35,8 @@ export const categoryList = [
     // "Car",
     "Real estate",
     // "Architecture",
+    "Shops",
+    "NPO",
     "Finance",
     "Insurance",
     // "Law",
@@ -177,7 +179,7 @@ export const dataArrGen: WebsiteData[] = [
     {
         "title": "snapask",
         "src": "https://snapask.com/zh-hk/",
-        "imageSrc": "",
+        "imageSrc": "snapask.jpg",
         "organization": "snapask",
         "category": [
             "Education"
@@ -189,7 +191,7 @@ export const dataArrGen: WebsiteData[] = [
     {
         "title": "pcmarket",
         "src": "https://www.pcmarket.com.hk/",
-        "imageSrc": "",
+        "imageSrc": "pcmarket.jpg",
         "organization": "pcmarket",
         "category": [
             "IT",
@@ -203,7 +205,7 @@ export const dataArrGen: WebsiteData[] = [
     {
         "title": "Centanet hk",
         "src": "https://hk.centanet.com/info/index",
-        "imageSrc": "",
+        "imageSrc": "Centanet_hk.jpg",
         "organization": "Centanet hk",
         "category": [
             "Real estate"
@@ -215,7 +217,7 @@ export const dataArrGen: WebsiteData[] = [
     {
         "title": "tpark",
         "src": "https://www.tpark.hk/en/",
-        "imageSrc": "",
+        "imageSrc": "tpark.jpg",
         "organization": "tpark",
         "category": [
             "Energy"
@@ -227,7 +229,7 @@ export const dataArrGen: WebsiteData[] = [
     {
         "title": "citic",
         "src": "https://www.citic.com/ar2021/en/",
-        "imageSrc": "",
+        "imageSrc": "citic.jpg",
         "organization": "citic",
         "category": [
             "Finance"
@@ -239,7 +241,7 @@ export const dataArrGen: WebsiteData[] = [
     {
         "title": "superview",
         "src": "https://www.superview.com.hk/",
-        "imageSrc": "",
+        "imageSrc": "superview.jpg",
         "organization": "superview",
         "category": [
             "Design"
@@ -251,27 +253,119 @@ export const dataArrGen: WebsiteData[] = [
     {
         "title": "HK Art museum",
         "src": "https://hk.art.museum/en/web/ma/home.html",
-        "imageSrc": "",
+        "imageSrc": "HK_Art_museum.jpg",
         "organization": "HK Art museum",
         "category": [
             "Art",
             "Culture"
         ],
         "tags": [
-            "Art", 
+            "Art",
             "Culture"
         ]
     },
     {
         "title": "HKJC Smart platform",
         "src": "https://m.hkjc.com/en/index.html",
-        "imageSrc": "",
+        "imageSrc": "HKJC_Smart_platform.jpg",
         "organization": "HKJC",
         "category": [
-            "Gambling",
+            "Gambling"
         ],
         "tags": [
-            "Gambling", 
+            "Gambling"
+        ]
+    },
+    {
+        "title": "ovaldesign",
+        "src": "https://www.ovaldesign.com.hk/",
+        "imageSrc": "ovaldesign.jpg",
+        "organization": "ovaldesign",
+        "category": [
+            "Design"
+        ],
+        "tags": [
+            "Design"
+        ]
+    },
+    {
+        "title": "morehugsbykenlo",
+        "src": "http://www.morehugsbykenlo.com/",
+        "imageSrc": "morehugsbykenlo.jpg",
+        "organization": "morehugsbykenlo",
+        "category": [
+            "Design",
+            "Shops"
+        ],
+        "tags": [
+            "Design",
+            "Shops"
+        ]
+    },
+    {
+        "title": "newlife330",
+        "src": "https://newlife330.hk/",
+        "imageSrc": "newlife330.jpg",
+        "organization": "newlife330",
+        "category": [
+            "NPO"
+        ],
+        "tags": [
+            "NPO"
+        ]
+    },
+    {
+        "title": "k2",
+        "src": "https://k2.digital/",
+        "imageSrc": "k2.jpg",
+        "organization": "k2",
+        "category": [
+            "IT",
+            "Business"
+        ],
+        "tags": [
+            "IT",
+            "Business"
+        ]
+    },
+    {
+        "title": "lolli",
+        "src": "https://lolli.com.hk/",
+        "imageSrc": "lolli.jpg",
+        "organization": "lolli",
+        "category": [
+            "IT",
+            "Business"
+        ],
+        "tags": [
+            "IT",
+            "Business"
+        ]
+    },
+    {
+        "title": "worfu",
+        "src": "https://worfu.com.hk/",
+        "imageSrc": "worfu.jpg",
+        "organization": "worfu",
+        "category": [
+            "Business"
+        ],
+        "tags": [
+            "Business"
+        ]
+    },
+    {
+        "title": "rabbitstudio",
+        "src": "https://rabbitstudio.net/",
+        "imageSrc": "rabbitstudio.jpg",
+        "organization": "rabbitstudio",
+        "category": [
+            "IT",
+            "Business"
+        ],
+        "tags": [
+            "IT",
+            "Business"
         ]
     }
 ]

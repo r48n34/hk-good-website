@@ -1,9 +1,16 @@
 import { Container, Text } from '@mantine/core';
 import DisplayCardGridScroll from '../components/general/DisplayCardGridScroll';
 import { dataArrGen } from '../data/tempData';
+import { motion } from 'framer-motion';
 
 function HomePage(){
     return (
+        <motion.div
+            initial={{ x: 600, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -600, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
         <Container fluid>
             <Text fw={300} fz={52} ta="center">
                 HK good design website
@@ -15,6 +22,7 @@ function HomePage(){
 
             <DisplayCardGridScroll data={dataArrGen} />
         </Container>
+        </motion.div>
     )
 }
     

@@ -45,7 +45,7 @@ function DisplayCardGridScroll({ data }: DisplayCardGridProps) {
             >
                 <Grid gutter="xl">
                     {displayData.map((v) => (
-                        <Grid.Col span={{ base: 12, md: 6, lg: 3 }} key={v.title}>
+                        <Grid.Col span={{ base: 12, md: 6, lg: 4 }} key={v.title}>
                             <WebsiteCard data={v} />
                         </Grid.Col>
                     ))}
