@@ -1,15 +1,15 @@
-import { Grid, Group, Loader, Space, Box } from "@mantine/core";
-import { useWindowScroll } from '@mantine/hooks';
-import { WebsiteData } from "../../interface/interface";
-import WebsiteCard from "./WebsiteCard";
 import { useEffect, useState } from "react";
+import { useWindowScroll } from '@mantine/hooks';
+import { Grid, Group, Loader, Space, Box } from "@mantine/core";
+import { WebsiteData } from "../../interface/interface";
 import InfiniteScroll from 'react-infinite-scroller';
+import WebsiteCard from "./WebsiteCard";
 
 type DisplayCardGridProps = {
     data: WebsiteData[];
 }
 
-const EACH_PAGE_SHOWS = 20
+const EACH_PAGE_SHOWS = 16
 
 function DisplayCardGridScroll({ data }: DisplayCardGridProps) {
 
