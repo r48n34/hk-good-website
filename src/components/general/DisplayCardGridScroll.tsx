@@ -9,7 +9,7 @@ type DisplayCardGridProps = {
     data: WebsiteData[];
 }
 
-const EACH_PAGE_SHOWS = 16
+const EACH_PAGE_SHOWS = 12
 
 function DisplayCardGridScroll({ data }: DisplayCardGridProps) {
 
