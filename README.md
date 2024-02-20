@@ -1,8 +1,12 @@
 # HK good design website
 
-Collections of Hong Kong / Chinese word main great design website.  
+Collections of Hong Kong / Chinese word main great design website.    
 
-URL: TBD
+**URL:**  
+https://hk-good-website.vercel.app/    
 
-## Contribute website
+## Q&A
+TBC
+
+## How to contribute
 TBC
