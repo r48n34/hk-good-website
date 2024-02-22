@@ -4,19 +4,24 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import Atropos from 'atropos/react';
 
+import { useHistoryStore } from '../../store/historyStore';
+
 type WebsiteCardProps = {
     data: WebsiteData;
 }
 
 function WebsiteCard({ data }: WebsiteCardProps) {
+
+    const addHistory = useHistoryStore( (state) => state.addHist );
+
     return (
         // <Indicator size={15} processing>
         <Atropos
             shadowScale={0.8}
             duration={200}
         >
-        <Card shadow="sm" padding="lg" radius="md" component="a" href={data.src} target='_blank'>
-            <Card.Section>
+        <Card shadow="sm" padding="lg" radius="md" >
+            <Card.Section component="a" href={data.src} target='_blank' onClick={() => addHistory(data)}>
                 <Box >
                     <LazyLoadImage
                         style={{ objectFit: "cover" }}
@@ -35,7 +40,7 @@ function WebsiteCard({ data }: WebsiteCardProps) {
                 </Box>
             </Card.Section>
 
-            <Text fw={300} mt={8} fz={22}>
+            <Text fw={300} mt={8} fz={20}>
                 {data.title}
             </Text>
 
