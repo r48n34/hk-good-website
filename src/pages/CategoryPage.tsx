@@ -15,7 +15,7 @@ function CategoryPage() {
                 initial={{ x: 600, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -600, opacity: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.3 }}
             >
                 <Container fluid>
                     <Text fw={300} fz={52}>
@@ -23,7 +23,7 @@ function CategoryPage() {
                     </Text>
 
                     <Text mb={48} fw={300} fz={18} mt={-8} c="dimmed">
-                        Here are the great {type} Design
+                        Here are the great {type} Design ( Total: {finalData.length} )
                     </Text>
 
                     <DisplayCardGridScroll data={finalData} />

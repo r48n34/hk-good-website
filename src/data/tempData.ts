@@ -38,7 +38,7 @@ export const categoryList = [
     "Shops",
     "NPO",
     "Finance",
-    "Insurance",
+    // "Insurance",
     // "Law",
     // "Marriage",
     // "Celebration",

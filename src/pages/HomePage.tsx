@@ -9,7 +9,7 @@ function HomePage(){
             initial={{ x: 600, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -600, opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
         >
         <Container fluid>
             <Text fw={300} fz={52} ta="center">

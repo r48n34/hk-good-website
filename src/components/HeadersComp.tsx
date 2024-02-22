@@ -6,6 +6,7 @@ import ColorToggleBtn from './helper/ColorToggleBtn';
 import { IconChevronRight } from '@tabler/icons-react';
 import QuestionModal from './general/QuestionModal';
 import { categoryList } from '../data/tempData';
+import SpotLightSearch from './SpotLightSearch';
 
 function HeadersComp() {
 
@@ -15,7 +16,7 @@ function HeadersComp() {
     return (
         <AppShell
             header={{ height: 60 }}
-            navbar={{ 
+            navbar={{
                 width: 250,
                 breakpoint: 'sm',
                 collapsed: { mobile: !opened }
@@ -24,24 +25,29 @@ function HeadersComp() {
         >
 
             <AppShell.Header>
-                <Group h="100%" px="md">
+                <Group h="100%" px="md" justify="space-between">
+
+
+                    <UnstyledButton onClick={() => navigate(`/`)}>
+                        <Text fw={300} fz={20}>
+                            HK good website
+                        </Text>
+                    </UnstyledButton>
+
+                    <SpotLightSearch visibleFrom="sm" />
                     <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
 
-                    <UnstyledButton onClick={ () => navigate(`/`)}>
-                    <Text fw={300} fz={20}>
-                        HK good website
-                    </Text>
-                    </UnstyledButton>
 
                 </Group>
             </AppShell.Header>
 
             <AppShell.Navbar p="md">
 
-                <AppShell.Section>  
+                <AppShell.Section>
+                    <SpotLightSearch mb={16}/>
                     <Text fz={14} fw={300}>
                         CATEGORY
-                    </Text>    
+                    </Text>
                 </AppShell.Section>
 
                 <AppShell.Section
@@ -54,18 +60,17 @@ function HeadersComp() {
                         categoryList.map((v) => (
                             <NavLink
                                 key={v}
-                                // href="#required-for-focus"
                                 label={v}
                                 leftSection={
                                     <IconChevronRight size="0.8rem" stroke={1.5} className="mantine-rotate-rtl" />
                                 }
-                                onClick={ () => {
+                                onClick={() => {
                                     navigate(`/category/${v}`);
                                     close()
                                 }}
                             />
                         )
-                    )}
+                        )}
                 </AppShell.Section>
 
                 <AppShell.Section>
