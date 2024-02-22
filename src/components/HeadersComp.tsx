@@ -1,9 +1,12 @@
 import { AppShell, Burger, Group, ScrollArea, Text, NavLink, UnstyledButton } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { motion } from 'framer-motion';
+
+
 import { Outlet, useNavigate } from "react-router-dom";
 import ColorToggleBtn from './helper/ColorToggleBtn';
 
-import { IconChevronRight } from '@tabler/icons-react';
+import { IconAppWindow, IconChevronRight } from '@tabler/icons-react';
 import QuestionModal from './general/QuestionModal';
 import { categoryList } from '../data/tempData';
 import SpotLightSearch from './SpotLightSearch';
@@ -28,9 +31,12 @@ function HeadersComp() {
                 <Group h="100%" px="md" justify="space-between">
 
                     <UnstyledButton onClick={() => navigate(`/`)}>
-                        <Text fw={300} fz={20}>
-                            HK good website
-                        </Text>
+                        <Group>
+                            <IconAppWindow size={24}/> 
+                            <Text fw={300} fz={20} ml={-10}>
+                                HK good website
+                            </Text>
+                        </Group>
                     </UnstyledButton>
 
                     <SpotLightSearch visibleFrom="sm" />
@@ -40,6 +46,12 @@ function HeadersComp() {
             </AppShell.Header>
 
             <AppShell.Navbar p="md">
+            <motion.div
+                initial={{ x: -600, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 600, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+            >
 
                 <AppShell.Section>
                     <SpotLightSearch mb={16} hiddenFrom="sm"/>
@@ -76,7 +88,7 @@ function HeadersComp() {
                         <QuestionModal />
                     </Group>
                 </AppShell.Section>
-
+            </motion.div>                    
             </AppShell.Navbar>
 
             <AppShell.Main>
