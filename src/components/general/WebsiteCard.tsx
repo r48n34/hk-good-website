@@ -1,6 +1,7 @@
 import { Card, Text, Badge, Group } from '@mantine/core';
 import { WebsiteData } from "../../interface/interface";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import Atropos from 'atropos/react';
 
 type WebsiteCardProps = {
@@ -20,8 +21,8 @@ function WebsiteCard({ data }: WebsiteCardProps) {
                     alt={data.title}
                     height={250}
                     width="100%"
+                    effect="blur"
                     src={`/${data.imageSrc}` || "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"}
-                    effect="opacity"
                 />
             </Card.Section>
 

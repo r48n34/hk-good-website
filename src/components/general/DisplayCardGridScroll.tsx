@@ -38,14 +38,14 @@ function DisplayCardGridScroll({ data }: DisplayCardGridProps) {
                 threshold={150} // Default 250
                 hasMore={(activePage - 1) * EACH_PAGE_SHOWS + EACH_PAGE_SHOWS <= data.length}
                 loader={
-                    <Group justify="center" mt={12} mb={12}>
+                    <Group justify="center" mt={12} mb={12} key={0}>
                         <Loader color="blue" type="bars" size="sm" />
                     </Group>
                 }
             >
                 <Grid gutter="xl">
                     {displayData.map((v) => (
-                        <Grid.Col span={{ base: 12, md: 6, lg: 4 }} key={v.title}>
+                        <Grid.Col span={{ base: 12, md: 6, lg: 4 }} key={v.src}>
                             <WebsiteCard data={v} />
                         </Grid.Col>
                     ))}

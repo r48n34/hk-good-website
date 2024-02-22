@@ -27,7 +27,6 @@ function HeadersComp() {
             <AppShell.Header>
                 <Group h="100%" px="md" justify="space-between">
 
-
                     <UnstyledButton onClick={() => navigate(`/`)}>
                         <Text fw={300} fz={20}>
                             HK good website
@@ -37,14 +36,13 @@ function HeadersComp() {
                     <SpotLightSearch visibleFrom="sm" />
                     <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
 
-
                 </Group>
             </AppShell.Header>
 
             <AppShell.Navbar p="md">
 
                 <AppShell.Section>
-                    <SpotLightSearch mb={16}/>
+                    <SpotLightSearch mb={16} hiddenFrom="sm"/>
                     <Text fz={14} fw={300}>
                         CATEGORY
                     </Text>
@@ -53,7 +51,6 @@ function HeadersComp() {
                 <AppShell.Section
                     grow my="md"
                     component={ScrollArea}
-                    // type="never"
                     scrollbarSize={2}
                 >
                     {

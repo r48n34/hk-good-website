@@ -12,6 +12,7 @@ export default function ColorToggleBtn({ mode = "Switch" }: ColorToggleBtnProps)
     return (
         <>
             {mode === "Switch" && (
+                <Tooltip label="Toggle theme">
                 <Group justify="center">
                     <Switch
                         checked={colorScheme === 'dark'}
@@ -21,6 +22,7 @@ export default function ColorToggleBtn({ mode = "Switch" }: ColorToggleBtnProps)
                         offLabel={<IconMoonStars color={theme.colors.gray[6]} size="1.25rem" stroke={1.5} />}
                     />
                 </Group>
+                </Tooltip>
             )}
 
             {mode === "Button" && (
