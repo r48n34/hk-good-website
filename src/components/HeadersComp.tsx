@@ -10,6 +10,7 @@ import { IconAppWindow, IconChevronRight } from '@tabler/icons-react';
 import QuestionModal from './general/QuestionModal';
 import { categoryList } from '../data/tempData';
 import SpotLightSearch from './SpotLightSearch';
+import HistoryLookUp from './general/HistoryLookUp';
 
 function HeadersComp() {
 
@@ -39,8 +40,15 @@ function HeadersComp() {
                         </Group>
                     </UnstyledButton>
 
-                    <SpotLightSearch visibleFrom="sm" />
-                    <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+                    <Group visibleFrom="sm">
+                        <HistoryLookUp />
+                        <SpotLightSearch />
+                    </Group>
+
+                    <Group hiddenFrom="sm">
+                        <HistoryLookUp />
+                        <Burger opened={opened} onClick={toggle} size="sm" />
+                    </Group>
 
                 </Group>
             </AppShell.Header>
