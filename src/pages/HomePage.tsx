@@ -13,8 +13,13 @@ function HomePage(){
             transition={{ duration: 0.2 }}
         >
         <Container fluid>
+
             <Text fw={300} fz={52} ta="center">
                 HK good design website
+            </Text>
+
+            <Text fw={300} fz={16} c="dimmed" ta="center">
+                香港好網站 | 搜羅香港眾多優秀設計網站
             </Text>
 
             <Text mb={48} fw={300} fz={18} mt={-2} c="dimmed" ta="center">

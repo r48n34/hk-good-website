@@ -8,7 +8,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import LoadingPage from './components/LoadingPage';
-import HeadersComp from './components/HeadersComp';
+// import HeadersComp from './components/HeadersComp';
+
+const HeadersComp = lazy(() => import('./components/HeadersComp'));
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const CategoryPage = lazy(() => import('./pages/CategoryPage'));
