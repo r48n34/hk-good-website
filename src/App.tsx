@@ -6,6 +6,8 @@ import { lazy, Suspense } from 'react';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { Analytics } from "@vercel/analytics/react"
+
 
 import LoadingPage from './components/LoadingPage';
 // import HeadersComp from './components/HeadersComp';
@@ -35,6 +37,7 @@ const router = createBrowserRouter([
 function App() {
 	return (
 		<>
+		<Analytics/>
 		<ColorSchemeScript defaultColorScheme="light" />
 		<AnimatePresence mode="wait" initial={true}>
 			<MantineProvider defaultColorScheme="light">
