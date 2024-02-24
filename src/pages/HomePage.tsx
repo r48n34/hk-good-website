@@ -1,4 +1,4 @@
-import { Container, Text } from '@mantine/core';
+import { Container, Text, Title } from '@mantine/core';
 import DisplayCardGridScroll from '../components/general/DisplayCardGridScroll';
 import { dataArrGen } from '../data/tempData';
 
@@ -14,13 +14,13 @@ function HomePage(){
         >
         <Container fluid>
 
-            <Text fw={300} fz={52} ta="center">
+            <Title order={1} fw={300} fz={52} ta="center">
                 HK good design website
-            </Text>
+            </Title>
 
-            <Text fw={300} fz={16} c="dimmed" ta="center">
+            <Title order={2} fw={300} fz={16} c="dimmed" ta="center" mt={8}>
                 香港好網站 | 搜羅香港眾多優秀設計網站
-            </Text>
+            </Title>
 
             <Text mb={48} fw={300} fz={18} mt={-2} c="dimmed" ta="center">
                 Collections of Hong Kong / Chinese word main great design website
