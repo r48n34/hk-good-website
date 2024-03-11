@@ -10,7 +10,8 @@ function HomePage(){
             initial={{ y: 600, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -600, opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 1.2 }}
+            variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
         >
         <Container fluid>
 

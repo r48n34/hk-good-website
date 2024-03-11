@@ -483,6 +483,13 @@
   resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-7.5.3.tgz#34168712075ee40ff7353c840420d4568b0dd54e"
   integrity sha512-mFI448mAs12v8FrgSVhytqlhTVrEjIfd/PqPEfwJu5YcZIq4YZdqpzJIUbANnRrFSvmoQpDb1PssdKx7Ds35hw==
 
+"@mantine/nprogress@^7.6.1":
+  version "7.6.1"
+  resolved "https://registry.yarnpkg.com/@mantine/nprogress/-/nprogress-7.6.1.tgz#d78587cf5ef608526c3f42d2381ec61a55cbf110"
+  integrity sha512-uSD9CJIQfDHRwjKvlgEsdP/dMhEcpKq3YNmnVfsvpcd8v2SY4lWCkT/x/gxyLZQ26UZbSL3peBc9yYozXBV+5w==
+  dependencies:
+    "@mantine/store" "7.6.1"
+
 "@mantine/spotlight@^7.5.3":
   version "7.5.3"
   resolved "https://registry.yarnpkg.com/@mantine/spotlight/-/spotlight-7.5.3.tgz#835f1aab1399682091c59baee3ccb3638b88d27f"
@@ -494,6 +501,11 @@
   version "7.5.3"
   resolved "https://registry.yarnpkg.com/@mantine/store/-/store-7.5.3.tgz#936fc63f16a0013ad8dfe66a5b82ae8a51fc282c"
   integrity sha512-jLTIaChJr9rWtzSRp2HQGHfuoFcr3ylD0JW/vsE5gpFvhoZFfkrxx5QsM1kn5wV34rZo0nQNMIJ8hvBVvfJtLQ==
+
+"@mantine/store@7.6.1":
+  version "7.6.1"
+  resolved "https://registry.yarnpkg.com/@mantine/store/-/store-7.6.1.tgz#631f31134ee05f32c0842be6cd642b07b4f026c1"
+  integrity sha512-UqSsJLlAL53OSSUNK/aTXpkss9DX0TppTbtBKXPyflYfq0B9vKwQKumxEsg3UGVC4cjiQq2VD4mjGT94r+deug==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"

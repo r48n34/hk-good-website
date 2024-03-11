@@ -1,7 +1,8 @@
+import { useEffect } from 'react';
 import { AppShell, Burger, Group, ScrollArea, Text, NavLink, UnstyledButton } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { useWindowScroll, useElementSize, useViewportSize, useDisclosure } from '@mantine/hooks';
+import { nprogress } from '@mantine/nprogress';
 import { motion } from 'framer-motion';
-
 
 import { Outlet, useNavigate } from "react-router-dom";
 import ColorToggleBtn from './helper/ColorToggleBtn';
@@ -13,9 +14,17 @@ import SpotLightSearch from './SpotLightSearch';
 import HistoryLookUp from './general/HistoryLookUp';
 
 function HeadersComp() {
+    const { height: windowsHeight } = useViewportSize();
+    const { ref, height } = useElementSize();
+
+    const [ scroll ] = useWindowScroll();
 
     const navigate = useNavigate()
     const [opened, { toggle, close }] = useDisclosure();
+
+    useEffect(() => {
+        nprogress.set( Math.floor((scroll.y / Math.max(height - windowsHeight, 0)) * 100))
+    }, [scroll]);
 
     return (
         <AppShell
@@ -99,7 +108,7 @@ function HeadersComp() {
             </motion.div>                    
             </AppShell.Navbar>
 
-            <AppShell.Main>
+            <AppShell.Main ref={ref}>
                 <Outlet />
             </AppShell.Main>
 

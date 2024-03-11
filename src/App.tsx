@@ -1,7 +1,9 @@
 import '@mantine/core/styles.css';
 import '@mantine/spotlight/styles.css';
 import 'atropos/css'
+import '@mantine/nprogress/styles.css';
 
+import { NavigationProgress } from '@mantine/nprogress';
 import { lazy, Suspense } from 'react';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -41,6 +43,7 @@ function App() {
 		<ColorSchemeScript defaultColorScheme="light" />
 		<AnimatePresence mode="wait" initial={true}>
 			<MantineProvider defaultColorScheme="light">
+				<NavigationProgress />
 				<Suspense fallback={<LoadingPage />}>
 					<RouterProvider router={router} />
 				</Suspense>
