@@ -10,7 +10,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Analytics } from "@vercel/analytics/react"
 
-
 import LoadingPage from './components/LoadingPage';
 // import HeadersComp from './components/HeadersComp';
 
